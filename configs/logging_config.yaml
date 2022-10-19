@@ -1,0 +1,8 @@
+producer:
+  file_name: 'producer_log.log'
+  max_bytes: 10000
+  backup_count: 5
+consumer:
+  file_name: 'consumer_log.log'
+  max_bytes: 10000
+  backup_count: 5
