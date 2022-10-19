@@ -1,3 +1,4 @@
 from .config_file_not_found_exception import ConfigFileNotFoundException
 from .invalid_config_file_exception import InvalidConfigFileException
 from .kafka_producer_exception import KafkaProducerException
+from .kafka_consumer_exception import KafkaConsumerException

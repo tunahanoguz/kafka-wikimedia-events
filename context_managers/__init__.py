@@ -1,1 +1,2 @@
 from .producer_context_manager import ProducerContextManager
+from .consumer_context_manager import ConsumerContextManager
