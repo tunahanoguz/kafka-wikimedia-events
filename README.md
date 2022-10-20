@@ -25,6 +25,8 @@ python producer.py
 python consumer.py
 ```
 
+![Usage](/usage.gif "Usage")
+
 ## 🛡 Legal Notes
 
 This project is purely for educational purposes. The data obtained is not processed anywhere and is not used for commercial purposes.
