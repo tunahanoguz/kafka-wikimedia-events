@@ -1,6 +1,4 @@
 from kafka.consumer.fetcher import ConsumerRecord
-from context_managers import ConsumerContextManager
-from concurrent.futures import ThreadPoolExecutor
 from models import WikimediaEvent
 from services.logging_service import LoggingService
 from exceptions import EventDataParsingException
@@ -30,11 +28,3 @@ class ConsumerService:
             return WikimediaEvent(**message_json)
         except Exception as e:
             raise EventDataParsingException(e)
-
-
-if __name__ == '__main__':
-    consumer_cxm = ConsumerContextManager()
-    consumer_service = ConsumerService(consumer_cxm)
-    with ThreadPoolExecutor() as executor:
-        for i in range(1, 3):
-            executor.submit(consumer_service.consume_message())
