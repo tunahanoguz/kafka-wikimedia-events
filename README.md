@@ -13,6 +13,18 @@ pip install -r requirements.txt
 
 There are `configs` folder in root directory of the project. The most **important** configuration file is `kafka_config.ini` file. You can edit this file according to your Apache Kafka configs.
 
+## 🏹 Usage
+
+### Producer
+```bash
+python producer.py
+```
+
+### Consumer
+```bash
+python consumer.py
+```
+
 ## 🛡 Legal Notes
 
 This project is purely for educational purposes. The data obtained is not processed anywhere and is not used for commercial purposes.
