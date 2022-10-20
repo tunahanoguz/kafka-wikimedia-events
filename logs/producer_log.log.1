@@ -1,0 +1,114 @@
+services.logging_service 2022-10-20 07:11:58,453 ERROR There is an event data parsing error! Expecting value: line 1 column 51 (char 50)
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 43, in _parse_event_data
+    return WikimediaEvent(id=event_meta['id'],
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 51 (char 50)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 33, in send_wikimedia_events
+    wikimedia_event = self._parse_event_data(event.data)
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 51, in _parse_event_data
+exceptions.event_data_parsing_exception.EventDataParsingException: There is an event data parsing error! Expecting value: line 1 column 51 (char 50)
+services.logging_service 2022-10-20 07:11:58,756 ERROR There is an event data parsing error! Unterminated string starting at: line 1 column 223 (char 222)
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 43, in _parse_event_data
+    return WikimediaEvent(id=event_meta['id'],
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 223 (char 222)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 33, in send_wikimedia_events
+    wikimedia_event = self._parse_event_data(event.data)
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 51, in _parse_event_data
+exceptions.event_data_parsing_exception.EventDataParsingException: There is an event data parsing error! Unterminated string starting at: line 1 column 223 (char 222)
+services.logging_service 2022-10-20 07:11:58,899 ERROR There is an event data parsing error! Unterminated string starting at: line 1 column 242 (char 241)
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 43, in _parse_event_data
+    return WikimediaEvent(id=event_meta['id'],
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 242 (char 241)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 33, in send_wikimedia_events
+    wikimedia_event = self._parse_event_data(event.data)
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 51, in _parse_event_data
+exceptions.event_data_parsing_exception.EventDataParsingException: There is an event data parsing error! Unterminated string starting at: line 1 column 242 (char 241)
+services.logging_service 2022-10-20 07:11:59,017 ERROR There is an event data parsing error! Unterminated string starting at: line 1 column 463 (char 462)
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 43, in _parse_event_data
+    return WikimediaEvent(id=event_meta['id'],
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 463 (char 462)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 33, in send_wikimedia_events
+    wikimedia_event = self._parse_event_data(event.data)
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 51, in _parse_event_data
+exceptions.event_data_parsing_exception.EventDataParsingException: There is an event data parsing error! Unterminated string starting at: line 1 column 463 (char 462)
+services.logging_service 2022-10-20 07:11:59,024 ERROR There is an event data parsing error! Unterminated string starting at: line 1 column 829 (char 828)
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 43, in _parse_event_data
+    return WikimediaEvent(id=event_meta['id'],
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 829 (char 828)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 33, in send_wikimedia_events
+    wikimedia_event = self._parse_event_data(event.data)
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 51, in _parse_event_data
+exceptions.event_data_parsing_exception.EventDataParsingException: There is an event data parsing error! Unterminated string starting at: line 1 column 829 (char 828)
+services.logging_service 2022-10-20 07:11:59,024 ERROR There is an event data parsing error! Unterminated string starting at: line 1 column 12 (char 11)
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 43, in _parse_event_data
+    return WikimediaEvent(id=event_meta['id'],
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python@3.9/3.9.1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 12 (char 11)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 33, in send_wikimedia_events
+    wikimedia_event = self._parse_event_data(event.data)
+  File "/Users/tunahanoguz/PycharmProjects/kafka-wikimedia-events/services/producer_service.py", line 51, in _parse_event_data
+exceptions.event_data_parsing_exception.EventDataParsingException: There is an event data parsing error! Unterminated string starting at: line 1 column 12 (char 11)
