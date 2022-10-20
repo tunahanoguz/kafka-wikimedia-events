@@ -1,6 +1,4 @@
-from context_managers import ProducerContextManager
 from sseclient import SSEClient as EventSource
-from concurrent.futures import ThreadPoolExecutor
 from configs import ConfigFileParser
 from models import WikimediaEvent
 from services.logging_service import LoggingService
@@ -48,11 +46,3 @@ class ProducerService:
                                   event_date=event_meta['dt'])
         except Exception as e:
             raise EventDataParsingException(e)
-
-
-if __name__ == '__main__':
-    producer_cxm = ProducerContextManager()
-    producer_service = ProducerService(producer_cxm)
-    with ThreadPoolExecutor() as executor:
-        for i in range(1, 11):
-            executor.submit(producer_service.send_wikimedia_events)
