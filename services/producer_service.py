@@ -3,6 +3,7 @@ from sseclient import SSEClient as EventSource
 from concurrent.futures import ThreadPoolExecutor
 from configs import ConfigFileParser
 from models import WikimediaEvent
+from services.logging_service import LoggingService
 from exceptions import InvalidEventDataException, EventDataParsingException
 import json
 
@@ -12,6 +13,8 @@ class ProducerService:
         self._producer_cxm = producer_context_manager
         config_parser = ConfigFileParser('kafka_config.yaml')
         self._kafka_config = config_parser.parse()
+        logging_service = LoggingService('producer')
+        self._logging = logging_service.create_logging()
 
     def send_message(self, topic: str, key: str, data: WikimediaEvent):
         with self._producer_cxm as p:
@@ -30,7 +33,7 @@ class ProducerService:
                 wikimedia_event = self._parse_event_data(event.data)
                 self.send_message(self._kafka_config['topic'], str(idx), wikimedia_event)
             except Exception as e:
-                print(e)
+                self._logging.exception(e)
                 pass
 
     @staticmethod
